@@ -27,21 +27,40 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var storyLabel: UILabel!
-        func displayNode(_ node: StoryNode) {
-        storyLabel.text = node.text
+
+    @IBOutlet weak var choiceButton1: UIButton!
+    
+    @IBOutlet weak var choiceButton2: UIButton!
+    
+    @IBAction func choiceTapped(_ sender: UIButton) {
+        let currentNode = storyNodes[currentNodeIndex]
+        
+        var selectedChoiceIndex: Int?
+        
+        if sender == choiceButton1 {
+            selectedChoiceIndex = 0
+        }
+        else if sender == choiceButton2 {
+            selectedChoiceIndex = 1
+        }
+        
+        if let index = selectedChoiceIndex, index < currentNode.choices.count {
+            let nextNodeIndex = currentNode.choices[index].destinationIndex
+            currentNodeIndex = nextNodeIndex
+            displayNode(storyNodes[nextNodeIndex])
+        }
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     // Array of all story nodes
     var storyNodes: [StoryNode] = []
+    
+    // Track the story node
+    var currentNodeIndex = 0
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,7 +154,34 @@ class ViewController: UIViewController {
         
         // Label text updates
         displayNode(storyNodes[0])
+    }
+    
+    
+    func displayNode(_ node: StoryNode) {
+        
+        // Update the story text
+        storyLabel.text = node.text
+        
+        // Update the buttons
+        if node.choices.count >= 1 {
+            choiceButton1.setTitle(node.choices[0].text, for: .normal)
+            choiceButton1.isHidden = false
+        }
+        else {
+            choiceButton1.isHidden = true
+        }
+        
+        if node.choices.count >= 2 {
+            choiceButton2.setTitle(node.choices[1].text, for: .normal)
+            choiceButton2.isHidden = false
+        }
+        else {
+            choiceButton2.isHidden = true
+        }
+        
         
     }
+    
+    
 }
 

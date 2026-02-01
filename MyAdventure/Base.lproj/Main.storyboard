@@ -26,20 +26,58 @@
                                 <color key="textColor" red="1" green="0.95617429563055945" blue="0.74224483981724898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rRo-px-1UN">
+                                <rect key="frame" x="20" y="689.66666666666663" width="353" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcD-qk-npc">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.80621229100000003" blue="0.47626604979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                            <color key="baseForegroundColor" red="0.26024985109999998" green="0.35279296869999999" blue="0.34952142089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choiceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYq-9Q-QG7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chP-Rc-Fn6">
+                                        <rect key="frame" x="179" y="0.0" width="174" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.80621229104985981" blue="0.47626604982533594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                            <color key="baseForegroundColor" red="0.26024985107579718" green="0.35279296874999999" blue="0.34952142085942384" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choiceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISi-jo-IUd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="abx-P9-qf4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="9f2-TD-fYr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rRo-px-1UN" secondAttribute="bottom" constant="60" id="HBz-7n-DTu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="abx-P9-qf4" secondAttribute="trailing" constant="20" id="Iix-oY-iHz"/>
                             <constraint firstAttribute="bottom" secondItem="Eto-2e-185" secondAttribute="bottom" id="Ji5-VD-uyM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRo-px-1UN" secondAttribute="trailing" constant="20" id="SxK-2C-6F7"/>
                             <constraint firstItem="abx-P9-qf4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xrc-hO-Sxk"/>
+                            <constraint firstItem="rRo-px-1UN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hqj-cf-WGS"/>
                             <constraint firstItem="Eto-2e-185" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="iL4-zR-nap"/>
                             <constraint firstAttribute="leading" secondItem="Eto-2e-185" secondAttribute="leading" id="nmH-um-jcq"/>
                             <constraint firstItem="Eto-2e-185" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pDK-jj-fUq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="choiceButton1" destination="WcD-qk-npc" id="7uJ-Za-8Pm"/>
+                        <outlet property="choiceButton2" destination="chP-Rc-Fn6" id="GNI-JH-NJp"/>
                         <outlet property="storyLabel" destination="abx-P9-qf4" id="NDG-cz-VlV"/>
                     </connections>
                 </viewController>
