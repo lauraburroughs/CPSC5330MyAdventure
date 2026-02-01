@@ -25,6 +25,21 @@ struct StoryNode {
 // Controller
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var storyLabel: UILabel!
+        func displayNode(_ node: StoryNode) {
+        storyLabel.text = node.text
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Array of all story nodes
     var storyNodes: [StoryNode] = []
     
@@ -116,6 +131,10 @@ class ViewController: UIViewController {
         storyNodes.append(ghostScaredNode)  // index 4
         storyNodes.append(witchTrapNode)    // index 5
         storyNodes.append(witchAllyNode)    // index 6
+        
+        
+        // Label text updates
+        displayNode(storyNodes[0])
         
     }
 }

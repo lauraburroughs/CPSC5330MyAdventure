@@ -19,16 +19,29 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="Eto-2e-185">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abx-P9-qf4">
+                                <rect key="frame" x="20" y="148" width="353" height="28.666666666666657"/>
+                                <color key="backgroundColor" red="0.41609375005000004" green="0.38662631602134456" blue="0.37884914007924581" alpha="0.80267935739436624" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.95617429563055945" blue="0.74224483981724898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="abx-P9-qf4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="9f2-TD-fYr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="abx-P9-qf4" secondAttribute="trailing" constant="20" id="Iix-oY-iHz"/>
                             <constraint firstAttribute="bottom" secondItem="Eto-2e-185" secondAttribute="bottom" id="Ji5-VD-uyM"/>
+                            <constraint firstItem="abx-P9-qf4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xrc-hO-Sxk"/>
                             <constraint firstItem="Eto-2e-185" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="iL4-zR-nap"/>
                             <constraint firstAttribute="leading" secondItem="Eto-2e-185" secondAttribute="leading" id="nmH-um-jcq"/>
                             <constraint firstItem="Eto-2e-185" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pDK-jj-fUq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="storyLabel" destination="abx-P9-qf4" id="NDG-cz-VlV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
