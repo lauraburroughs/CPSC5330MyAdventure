@@ -24,8 +24,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Eto-2e-185" secondAttribute="bottom" id="Ji5-VD-uyM"/>
-                            <constraint firstAttribute="trailing" secondItem="Eto-2e-185" secondAttribute="trailing" id="iL4-zR-nap"/>
-                            <constraint firstItem="Eto-2e-185" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nmH-um-jcq"/>
+                            <constraint firstItem="Eto-2e-185" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="iL4-zR-nap"/>
+                            <constraint firstAttribute="leading" secondItem="Eto-2e-185" secondAttribute="leading" id="nmH-um-jcq"/>
                             <constraint firstItem="Eto-2e-185" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pDK-jj-fUq"/>
                         </constraints>
                     </view>
