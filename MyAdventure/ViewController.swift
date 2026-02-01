@@ -7,6 +7,20 @@
 
 import UIKit
 
+// Model
+struct Choice {
+    let text: String
+    let destinationIndex: Int
+}
+
+
+
+
+
+
+
+
+// Controller
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -14,6 +28,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    
+    
+    
+    
+    
+    
 
 }
 
